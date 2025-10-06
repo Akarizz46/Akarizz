@@ -1,0 +1,88 @@
+/* --- Global Styles & Dark Theme --- */
+:root {
+    --primary-bg: #1c2128; /* Dark background */
+    --secondary-bg: #2d333b; /* Card background */
+    --text-color: #c9d1d9; /* Light grey text */
+    --accent-color: #58a6ff; /* Blue for buttons and links */
+    --border-color: #444c56;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 15px;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on some displays */
+}
+
+/* --- Main App Container --- */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* --- Product Grid Layout --- */
+.product-grid {
+    display: grid;
+    /* Create responsive columns: 2 on wider screens, 1 on smaller */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px; /* Space between cards */
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #8b949e; /* Dimmer color for price/description */
+    margin: 5px 0 15px 0;
+}
+
+/* --- Button Styling --- */
+.buy-button {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buy-button:hover {
+    background-color: #79b8ff; /* Lighter blue on hover */
+}
